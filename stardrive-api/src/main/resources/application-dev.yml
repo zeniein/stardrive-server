@@ -1,0 +1,42 @@
+server:
+  port: 9001
+  servlet:
+    tomcat:
+      max-http-header-size: 819200
+      max-url-length: 819200
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/stardrive?useSSL=true&useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT%2B8
+    username: root
+    password: 123456
+  servlet:
+    multipart:
+      max-file-size: 30MB
+      max-request-size: 100MB
+
+thread:
+  pool:
+    core-pool-size: 5
+    max-pool-size: 20
+    queue-capacity: 100
+    keep-alive-seconds: 60
+
+
+upload:
+  path:
+    base: F:/test/disk
+host:
+  api: http://localhost:9001
+
+secret:
+  aes:
+    key: "1234123412341234"
+    iv: "0000000000000000"
+  rsa:
+    private-key: MIICdgIBADANBgkqhkiG9w0BAQEFAASCAmAwggJcAgEAAoGBAJ1uWzzB2O0AybONomT6xKWXCbigIP+6daVzvyC9NsB80zg2dgk6GwhtQLlWyrR3ni0+KORf2kqrsS74bWbC88QG5bhHAaRVZB9N9+8BtjAaSdu3HRifVWWfQlnIrfy0GIkF2xig0j3uowUKqih52iuqliVUx56lWoAW8igYta4/AgMBAAECgYBp2971x9M56qG2XrKn/Adm4VzkDKijzJl3G5GVTiYW4NiWn+hW4/9xdyViev3qw9RUz8tnZRy/wRtvXhUSWFzYkUdCROzGLZeRaM+4PdFpG36OP8JPUZnT6HDg8TS2TF3bHd2Yqymqq4+GcnzBFyXR56+Kp+Tu1pZPluIZnuGVIQJBAM4OjJFd43oIsONdYgt4A4fEYItshYSSJw1HHaAwtQyKInS7PNf5KLVq3fWkaB4P2ZmPVoaz3IrVq5OENI0SEuUCQQDDlqr/7u3+BC7QpztYYrVooJySXrd4fkrBorHXLJTRVcx8NQkpYiVviMXTCNgnU/I0tb6E7hlEhjwkhUFEVHZTAkEAySohB2Xex2umrUGkj0fKQohwLI10yBkbMPZFsPb8OdK9krKc0sh3eq1rJf4se3TD3gu20GjVnWC+UZTW7QZBFQJARHcQYsijfKDANn/jsTvUXsyiIkaPmNk0l/W4pSbQ7TpIe04hZ+AYVKOfBBF7gMDM7xCToXqrU6ZdlTckMqQSSwJAHTpaYMHmQAHUKsou7E269dAQ5qmqX+JkZDVaP4XPxeyaP5koYSHOmqFbYr7Cv8xCVoYFFuteSurqxscFstANhg==
+    public-key: MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCdbls8wdjtAMmzjaJk+sSllwm4oCD/unWlc78gvTbAfNM4NnYJOhsIbUC5Vsq0d54tPijkX9pKq7Eu+G1mwvPEBuW4RwGkVWQfTffvAbYwGknbtx0Yn1Vln0JZyK38tBiJBdsYoNI97qMFCqooedorqpYlVMeepVqAFvIoGLWuPwIDAQAB
+#mybatis-plus:
+#  configuration:
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
